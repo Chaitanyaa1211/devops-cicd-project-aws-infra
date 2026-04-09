@@ -2,13 +2,6 @@ pipeline {
     agent any
 
     stages {
-
-        stage('Clone Code') {
-            steps {
-                git 'https://github.com/Chaitanyaa1211/devops-cicd-project-aws-infra.git'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t chaitanyaaaa/devops-demo:latest .'
@@ -37,3 +30,4 @@ pipeline {
         }
     }
 }
+
